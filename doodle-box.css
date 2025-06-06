@@ -1,0 +1,827 @@
+body {
+  background-color: rgb(215, 214, 201);
+}
+
+.title {
+  text-align: center;
+}
+
+.aboutButton {
+  border: none;
+  background-color: transparent;
+  color: black;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.aboutButton:hover {
+  opacity: 0.5;
+}
+
+.aboutCloseButton {
+  border: solid;
+  border-color: black;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+
+.aboutCloseButton:hover {
+  background-color: lightgrey;
+}
+
+.aboutInfo {
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  margin-left: -350px;
+  width: 700px;
+  height: 300px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  background-color: white;
+  z-index: 999;
+}
+
+.canvasChoice {
+  position: absolute;
+  left: 50%;
+  margin-left: -75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  width: 150px;
+  height: 160px;
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+.canvasButton {
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.canvasButton:hover {
+  background-color: lightgrey;
+}
+
+.canvasContainer {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+}
+
+.canvas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-size: 0;
+}
+
+.boxLine {
+  margin: 0px;
+}
+
+.eightBox  {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin: inherit;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  background-color: white;
+  height: 65px;
+  width: 65px;
+}
+
+.sixteenBox {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin: inherit;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  background-color: white;
+  height: 34px;
+  width: 34px;
+}
+
+.thirtyTwoBox {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin: inherit;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  background-color: white;
+  height: 17px;
+  width: 17px;
+}
+
+.sixtyFourBox {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin: inherit;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  background-color: white;
+  height: 8.5px;
+  width: 8.5px;
+}
+
+@media (max-width: 2400px) {
+  .eightBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 120px;
+    width: 120px;
+  }
+
+  .sixteenBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 55px;
+    width: 55px;
+  }
+
+  .thirtyTwoBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 28px;
+    width: 28px;
+  }
+
+  .sixtyFourBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 14px;
+    width: 14px;
+  }
+}
+
+@media (max-width: 1800px) {
+  .eightBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 68px;
+    width: 68px;
+  }
+
+  .sixteenBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 34px;
+    width: 34px;
+  }
+
+  .thirtyTwoBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 17px;
+    width: 17px;
+  }
+
+  .sixtyFourBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 8.5px;
+    width: 8.5px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .eightBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 60px;
+    width: 60px;
+  }
+
+  .sixteenBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 30px;
+    width: 30px;
+  }
+
+  .thirtyTwoBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sixtyFourBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 8px;
+    width: 8px;
+  }
+}
+
+@media (max-width: 540px) {
+  .eightBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 20px;
+    width: 20px;
+  }
+
+  .sixteenBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 15px;
+    width: 15px;
+  }
+
+  .thirtyTwoBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 10px;
+    width: 10px;
+  }
+
+  .sixtyFourBox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    background-color: white;
+    height: 8px;
+    width: 8px;
+  }
+}
+
+.eightBox:hover {
+  background-color: lightgrey;
+}
+
+.sixteenBox:hover {
+  background-color: lightgrey;
+}
+
+.thirtyTwoBox:hover {
+  background-color: lightgrey;
+}
+
+.sixtyFourBox:hover {
+  background-color: lightgrey;
+}
+
+.paletteContainer {
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  background-color: rgb(174, 147, 85);
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.paletteHeader {
+  font-size: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.colorEdit {
+  display: none;
+  position: absolute;
+  top: 28%;
+  left: 140px;
+  border: solid;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  background-color: white;
+  height: 150px;
+  width: 140px;
+}
+
+.colorInput {
+  width: 40px;
+  height: 10px;
+  text-align: center;
+}
+
+.colorInput:focus {
+  outline-color: lightgrey;
+  outline-offset: none;
+  outline-width: 1px;
+}
+
+.redSlider {
+  accent-color: red;
+}
+
+.greenSlider {
+  accent-color: green;
+}
+
+.blueSlider {
+  accent-color: blue;
+}
+
+.rgbButton {
+  text-align: center;
+}
+
+.selectedButton {
+  border-color: lightgrey;
+  border-width: 2px;
+}
+
+.firstColor {
+  margin-left: 20px;
+  margin-right: 5px;
+  height: 40px;
+  width: 40px;
+  border-style: solid;
+  background-color: white;
+  color: transparent;
+  margin-bottom: 10px;
+}
+
+.firstColor:hover {
+  opacity: 0.5;
+}
+
+.firstColorEdit {
+  width: 20px;
+  padding: 0px;
+  border-style: none;
+  background-color: transparent;
+}
+
+.firstColorEdit:hover {
+  color: white;
+}
+
+.closeColor {
+  border: solid;
+  border-color: black;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  margin-top: 5px;
+  margin-left: 45px;
+}
+
+.closeColor:hover {
+  background-color: lightgrey;
+}
+
+.secondColor {
+  margin-left: 20px;
+  margin-right: 5px;
+  height: 40px;
+  width: 40px;
+  border-style: solid;
+  background-color: white;
+  color: transparent;
+  margin-bottom: 10px;
+}
+
+.secondColor:hover {
+  opacity: 0.5;
+}
+
+.secondColorEdit {
+  width: 20px;
+  padding: 0px;
+  border-style: none;
+  background-color: transparent;
+}
+
+.secondColorEdit:hover {
+  color: white;
+}
+
+.thirdColor {
+  margin-left: 20px;
+  margin-right: 5px;
+  height: 40px;
+  width: 40px;
+  border-style: solid;
+  background-color: white;
+  color: transparent;
+  margin-bottom: 10px;
+}
+
+.thirdColor:hover {
+  opacity: 0.5;
+}
+
+.thirdColorEdit {
+  width: 20px;
+  padding: 0px;
+  border-style: none;
+  background-color: transparent;
+}
+
+.thirdColorEdit:hover {
+  color: white;
+}
+
+.fourthColor {
+  margin-left: 20px;
+  margin-right: 5px;
+  height: 40px;
+  width: 40px;
+  border-style: solid;
+  background-color: white;
+  color: transparent;
+  margin-bottom: 10px;
+}
+
+.fourthColor:hover {
+  opacity: 0.5;
+}
+
+.fourthColorEdit {
+  width: 20px;
+  padding: 0px;
+  border-style: none;
+  background-color: transparent;
+}
+
+.fourthColorEdit:hover {
+  color: white;
+}
+
+.fifthColor {
+  margin-left: 20px;
+  margin-right: 5px;
+  height: 40px;
+  width: 40px;
+  border-style: solid;
+  background-color: white;
+  color: transparent;
+  margin-bottom: 20px;}
+
+.fifthColor:hover {
+  opacity: 0.5;
+}
+
+.fifthColorEdit {
+  width: 20px;
+  padding: 0px;
+  border-style: none;
+  background-color: transparent;
+}
+
+.fifthColorEdit:hover {
+  color: white;
+}
+
+.toolsContainer {
+  position: absolute;
+  top: 10%;
+  right: 0%;
+  background-color: rgb(135, 135, 135);
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.toolsHeader {
+  font-size: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.firstTool {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 60px;
+  width: 60px;
+  border-style: solid;
+  background-color: rgb(83, 108, 232);
+  margin-bottom: 10px;
+}
+
+.firstTool:hover {
+  opacity: 0.5;
+}
+
+.secondTool {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 60px;
+  width: 60px;
+  border-style: solid;
+  background-color: rgb(62, 216, 62);
+  margin-bottom: 10px;
+}
+
+.secondTool:hover {
+  opacity: 0.5;
+}
+
+.saveConfirmation {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  height: 60px;
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  background-color: rgb(62, 216, 62);
+  z-index: 999;
+}
+
+.yesSave {
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.yesSave:hover {
+  background-color: lightgrey;
+}
+
+.noSave {
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.noSave:hover {
+  background-color: lightgrey;
+}
+
+.thirdTool {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 60px;
+  width: 60px;
+  border-style: solid;
+  background-color: rgb(255, 96, 96);
+  margin-bottom: 10px;
+}
+
+.thirdTool:hover {
+  opacity: 0.5;
+}
+
+.deleteConfirmation {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  margin-left: -200px;
+  width: 400px;
+  height: 60px;
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  background-color: rgb(255, 96, 96);
+  z-index: 999;
+}
+
+.yesDelete {
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.yesDelete:hover {
+  background-color: lightgrey;
+}
+
+.noDelete {
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.noDelete:hover {
+  background-color: lightgrey;
+}
+
+.closeConfirmation {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  margin-left: -225px;
+  width: 450px;
+  height: 80px;
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: solid;
+  border-width: 3px;
+  border-radius: 10px;
+  background-color: rgb(255, 96, 96);
+  z-index: 999;
+}
+
+.yesClose {
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.yesClose:hover {
+  background-color: lightgrey;
+}
+
+.noClose {
+  background-color: white;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.noClose:hover {
+  background-color: lightgrey;
+}
+
+.fourthTool {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 60px;
+  width: 60px;
+  border-style: solid;
+  background-color: rgb(253, 158, 202);
+  margin-bottom: 20px;
+}
+
+.fourthTool:hover {
+  opacity: 0.5;
+}
+
+.closeCanvas {
+  margin-top: 10px;
+  border: solid;
+  border-color: black;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+
+.closeCanvas:hover {
+  background-color: lightgrey;
+}
+
+.doodleBuddy {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+}
+
+.speachBubble {
+  position: fixed;
+  bottom: 50px;
+  right: 80px;
+  width: 120px;
+  border: solid;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 10px 10px 0px 10px;
+  background-color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  font-size: smaller;
+}

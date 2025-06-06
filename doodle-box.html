@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="doodle-box.css">
+    <script type="module" src="doodle-box.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+    <link rel="icon" href="./photos/pixel-pencil.png">
+    <title>Doodle-Box</title>
+  </head>
+  <body>
+    <h1 class="title">Doodle Box!</h1>
+
+    <div id="about-info" class="aboutInfo">
+      <div>Doodle Box is a simple pixel art doodling tool.</div>
+      <div>To start doodling please select a Canvas Size. </div>
+      <div>You will be able to create a Palette of colors to doodle with on the left.</div>
+      <div>To use a color on your Palette simply click it then click the pixel you would like to color.</div>
+      <div>You can edit the colors in your palette by clicking the Edit Button.</div>
+      <div>To turn off the grid around each pixel click the Toggle Grid Tool.</div>
+      <div>To save the image you created to your computer click the Save Doodle Tool.</div>
+      <div>To clear the entire Canvas click the Clear Doodle Tool.</div>
+      <div>To erase a single pixel select the Eraser Tool and then click the pixel you wish to erase.</div>
+      <div>Thank you for using Doodle Box and enjoy!</div>
+      <button id="about-close-button" class="aboutCloseButton">close about info</button>
+    </div>
+
+    <div id="save-confirmation" class="saveConfirmation">
+      <div>Are you sure you want to download your doodle?</div>
+      <button id="yes-save" class="yesSave">Yes</button>
+      <button id="no-save" class="noSave">No</button>
+    </div>
+
+    <div id="delete-confirmation" class="deleteConfirmation">
+      <div>If you click "Yes" your doodle will be deleted forever.</div>
+      <div>Are you sure you want to delete your doodle?</div>
+      <button id="yes-delete" class="yesDelete">Yes</button>
+      <button id="no-delete" class="noDelete">No</button>
+    </div>
+
+    <div id="close-confirmation" class="closeConfirmation">
+      <div>Closing the Canvas will also delete your doodle.</div>
+      <div>If you click "Yes" your doodle will be deleted forever.</div>
+      <div>Are you sure you want to close the Canvas and delete your doodle?</div>
+      <button id="yes-close" class="yesClose">Yes</button>
+      <button id="no-close" class="noClose">No</button>
+    </div>
+
+    <button id="about-button" class="aboutButton">What is Doodle Box?</button>
+
+    <div id="canvas" class="canvasChoice">
+      <h3>Canvas Size:</h3>
+      <button id="eight-button" class="canvasButton">8x8</button>
+      <div></div>
+      <button id="sixteen-button" class="canvasButton">16x16</button>
+      <div></div>
+      <button id="thirty-two-button" class="canvasButton">32x32</button>
+      <div></div>
+      <button id="sixty-four-button" class="canvasButton">64x64</button>
+    </div>
+
+    <div id="color-edit" class="colorEdit">
+      <div id="red-text" class="rgbButton"></div>
+      <input class="redSlider" type="range" id="red" min="0" max="255">
+      <div id="green-text" class="rgbButton"></div>
+      <input class="greenSlider" type="range" id="green" min="0" max="255">
+      <div id="blue-text" class="rgbButton"></div>
+      <input class="blueSlider" type="range" id="blue" min="0" max="255">
+      <button id="close-color" class="closeColor">Close</button>
+    </div>
+
+    <div id="doodle-buddy">
+      <image class="doodleBuddy" src="./photos/doodle-buddy.png"></image>
+      <div id="speach-bubble" class="speachBubble"> Hello, I'm Doodle Buddy. Click for a suggestion of what to doodle next!</div>
+    </div>
+  </body>
+</html>
