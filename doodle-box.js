@@ -1,6 +1,8 @@
 const aboutButton = document.getElementById('about-button');
 const aboutInfo = document.getElementById('about-info');
 
+
+// Opens and closes about information.
 aboutButton.addEventListener('click', () => {
   aboutInfo.style.display = 'flex';
 
@@ -21,6 +23,7 @@ let selectedColor = `rgb(0, 0, 0)`;
 
 const allElements = document.querySelectorAll('*');
 
+// Only lets you click on the current popup menu.
 function onlyClickPopup(popupId) {
   const popupElement = document.getElementById(popupId);
   popupElement.style.pointerEvents = 'auto';
@@ -45,6 +48,7 @@ function openCanvas(selectedCanvasBoxes) {
 
   const doodleButtons = document.querySelectorAll('.doodleButton');
 
+  // This allows only one doodle button/color to be selected at a time.
   doodleButtons.forEach(button => {
     button.addEventListener('click', () => {
       doodleButtons.forEach(button => button.classList.remove('selectedButton'));
@@ -52,6 +56,8 @@ function openCanvas(selectedCanvasBoxes) {
     });
   });
 
+  // This opens the color picker when clicking the color edit button.
+  // It also updates the background color of the color button you are editting to reflect your newly selected color.
   function openColorPicker(clickedColorEdit, clickedColorButton) {
     const colorEdit = document.getElementById('color-edit');
     const redText = document.getElementById('red-text');
@@ -186,6 +192,7 @@ function openCanvas(selectedCanvasBoxes) {
     };
   };
 
+  // The bellow functions add the ability to select which color you want to doodle with as well as allows you to open the color picker for each of the colors.
   const firstColorButton = document.getElementById('first-color');
   
   firstColorButton.addEventListener('click', () => {
@@ -270,6 +277,7 @@ function openCanvas(selectedCanvasBoxes) {
 
   const toggleGridTool = document.getElementById('toggle-grid');
 
+  // This allows you to toggle the graph paper like grid that is present on the canvas.
   toggleGridTool.addEventListener('click', () => {
     if (gridOn === 'yes') {
       gridOn = 'no';
@@ -286,6 +294,7 @@ function openCanvas(selectedCanvasBoxes) {
 
   const saveDoodleTool = document.getElementById('save-doodle');
 
+  // This uses the html2canvas library to save an image of the doodle you've created to your downloads.
   function saveDoodle() {
     const confirmSave = document.getElementById('save-confirmation');
 
@@ -327,6 +336,7 @@ function openCanvas(selectedCanvasBoxes) {
 
   const deleteDoodleTool = document.getElementById('delete-doodle');
 
+  // This erases the entire canvas so you start again with a blank white canvas.
   deleteDoodleTool.addEventListener('click', () => {
     const confirmDelete = document.getElementById('delete-confirmation');
 
@@ -358,12 +368,14 @@ function openCanvas(selectedCanvasBoxes) {
 
   const eraserTool = document.getElementById('eraser');
 
+  // This toggles the erasor to be on so you can erase/doodle in white on the canvas.
   eraserTool.addEventListener('click', () => {
     eraserOn = 'yes';
   });
 
   const closeCanvas = document.getElementById('close-canvas');
 
+  // This closes the canvas and sends you back to the canvas selection screen.
   closeCanvas.addEventListener('click', () => {
     const confirmClose = document.getElementById('close-confirmation');
   
@@ -387,6 +399,7 @@ function openCanvas(selectedCanvasBoxes) {
   });
 };
 
+// The bellow all generate canvases based on which size selection you made.
 const eightButton = document.getElementById('eight-button')
 
 eightButton.addEventListener('click', () => {
@@ -6241,6 +6254,7 @@ sixtyFourButton.addEventListener('click', () => {
 
 const doodleBuddy = document.getElementById('doodle-buddy');
 
+// This loads Doodle Buddy's suggestions at random when you click on him or the speach bubble.
 doodleBuddy.addEventListener('click', () => {
   const speachBubble = document.getElementById('speach-bubble');
 
