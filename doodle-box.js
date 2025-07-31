@@ -259,19 +259,35 @@ function openCanvas(selectedCanvasBoxes) {
     openColorPicker(fifthColorEdit, fifthColorButton);
   });
 
+  let mouseDown = false;
+
   selectedCanvasBoxes.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('mousedown', () => {
+      mouseDown = true
+
       if (eraserOn === 'no') {
         button.style.backgroundColor = `${selectedColor}`;
       } else if (eraserOn === 'yes') {
         button.style.backgroundColor = ``;
       }    
     });
+
     button.addEventListener('mouseover', () => {
+      if (mouseDown && eraserOn === 'no') {
+        button.style.backgroundColor = `${selectedColor}`;
+      } else if (mouseDown && eraserOn === 'yes') {
+        button.style.backgroundColor = ``; 
+      } else {
       button.style.opacity = 0.5;
+      }
     });
+
     button.addEventListener('mouseout', () => {
       button.style.opacity = 1;
+    });
+
+    document.addEventListener('mouseup', () => {
+      mouseDown = false;
     });
   });
 
