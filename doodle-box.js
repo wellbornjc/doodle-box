@@ -291,6 +291,44 @@ function openCanvas(selectedCanvasBoxes) {
     });
   });
 
+  selectedCanvasBoxes.forEach(button => {
+    button.addEventListener('touchstart', (event) => {
+      mouseDown = true
+      if (eraserOn === 'no') {
+        button.style.backgroundColor = `${selectedColor}`;
+      } else if (eraserOn === 'yes') {
+        button.style.backgroundColor = ``;
+      }    
+    });
+
+    button.addEventListener('touchmove', (event) => {
+      event.preventDefault();
+      const touch = event.touches[0];
+      const buttonOver = document.elementFromPoint(touch.clientX, touch.clientY);
+      if (buttonOver && buttonOver.tagName === "BUTTON" && buttonOver.parentElement.className === 'boxLine') {
+        if (mouseDown && eraserOn === 'no') {
+          buttonOver.style.backgroundColor = `${selectedColor}`;
+        } else if (mouseDown && eraserOn === 'yes') {
+          buttonOver.style.backgroundColor = ``; 
+        } else {
+        buttonOver.style.opacity = 0.5;
+        }
+      }
+    });
+
+    button.addEventListener('mouseout', () => {
+      button.style.opacity = 1;
+    });
+
+    document.addEventListener('touchout', () => {
+      mouseDown = false;
+    });
+
+    document.addEventListener('touchcancel', () => {
+      mouseDown = false;
+    });
+  });
+
   const toggleGridTool = document.getElementById('toggle-grid');
 
   // This allows you to toggle the graph paper like grid that is present on the canvas.
